@@ -1,43 +1,31 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, {useState} from 'react';
-import LoginForm from "./components/LoginForm";
+import React from "react";
+import Signin from "./components/Signin";
+
+
+import { Route, Routes } from "react-router-dom";
+import { AuthContextProvider } from "./context/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
+import HomePage from "./components/HomePage";
+
 
 function App() {
-
-const adminUser = {
-  email:'admin@admin.com',
-  password: 'admin'
-}
-
-const [user, setUser] = useState({name:'', email:''});
-const [error, setError]= useState('');
-
-
-const Login = details => {
-  console.log(details)
-  if (details.email == adminUser.email && details.password == adminUser.password){
-    console.log('logged in')
-  }else{
-    console.log('error ')
-  }
-}
-
-const LogOut = () => {
-  console.log('logout');
-};
-
   return (
-    <div className="App">
-      {
-      (user.email != '') ? (
-        <div className="welcome">
-          <h2>Welcome, <span>{user.name}</span></h2>
-        </div>
-      ) : (
-        <LoginForm Login = {Login} error = {error} />
-      )
-    }
-     
+    <div>
+      <AuthContextProvider>
+        <Routes>
+          <Route path="/" element={<Signin />} />
+        
+          <Route
+            path="/home"
+            element={
+              <ProtectedRoute>
+                <HomePage />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </AuthContextProvider>
     </div>
   );
 }
