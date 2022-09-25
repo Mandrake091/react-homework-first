@@ -1,12 +1,30 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext";
+
+
 
 function NavBar() {
+  const { user, logout } = UserAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate("/");
+      console.log("You are logged out");
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
+
+
   return (
     <div>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            Navbar
+          <a class="navbar-brand" href="/home">
+          Home
           </a>
           <button
             class="navbar-toggler"
@@ -21,19 +39,19 @@ function NavBar() {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">
-                Home
+              <a class="nav-link active" aria-current="page" href="/wishlist">
+                Wishlist
               </a>
-              <a class="nav-link" href="#">
-                Features
+              <a class="nav-link" href="/feed">
+                Feed
               </a>
-              <a class="nav-link" href="#">
-                Pricing
+              <a class="nav-link" href="/contact">
+                Contact me
               </a>
-              <a class="nav-link disabled">Disabled</a>
             </div>
           </div>
         </div>
+        <button onClick={handleLogout} className="btn btn-primary me-3">Logout</button>
       </nav>
     </div>
   );
