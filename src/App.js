@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import Signin from "./components/Signin";
 
+
 import { Route, Routes } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -10,10 +11,12 @@ import Feed from "./components/pages/Feed";
 import Contact from "./components/pages/Contact";
 import NavBar from "./components/NavBar";
 import WishList from "./components/pages/WishList";
-  
+
 console.log("e-mail: admin@admin.com", "psw: Admin123");
 
 function App() {
+
+
   return (
     <div>
       <AuthContextProvider>
@@ -41,7 +44,7 @@ function App() {
             path="/feed"
             element={
               <ProtectedRoute>
-                <Feed />
+                <Feed/>
               </ProtectedRoute>
             }
           />
