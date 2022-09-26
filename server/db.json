@@ -4,73 +4,111 @@
       "id": 1,
       "title": "Sea",
       "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/200/300"
+      "image": "https://picsum.photos/seed/picsum/400/300"
     },
     {
       "id": 2,
       "title": "Sea",
       "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/200/300"
+      "image": "https://picsum.photos/seed/picsum/400/300"
     },
     {
       "id": 3,
       "title": "Sea",
       "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/200/300"
+      "image": "https://picsum.photos/seed/picsum/400/300"
     },
     {
       "id": 4,
       "title": "Sea",
       "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/200/300"
+      "image": "https://picsum.photos/seed/picsum/400/300"
     },
     {
       "id": 5,
       "title": "Sea",
       "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/200/300"
+      "image": "https://picsum.photos/seed/picsum/400/300"
     },
     {
       "id": 6,
       "title": "Sea",
       "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/200/300"
+      "image": "https://picsum.photos/seed/picsum/400/300"
     },
     {
       "id": 7,
       "title": "Sea",
       "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/200/300"
+      "image": "https://picsum.photos/seed/picsum/400/300"
     },
     {
       "id": 8,
       "title": "Sea",
       "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/200/300"
+      "image": "https://picsum.photos/seed/picsum/400/300"
     },
     {
       "id": 9,
       "title": "Sea",
       "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/200/300"
+      "image": "https://picsum.photos/seed/picsum/400/300"
     },
     {
       "id": 10,
       "title": "Sea",
       "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/200/300"
+      "image": "https://picsum.photos/seed/picsum/400/300"
     },
     {
       "id": 11,
       "title": "Sea",
       "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/200/300"
+      "image": "https://picsum.photos/seed/picsum/400/300"
     },
     {
       "id": 12,
       "title": "Sea",
       "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/200/300"
+      "image": "https://picsum.photos/seed/picsum/400/300"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Smartphone",
+      "price": "399€",
+      "image": "https://img.freepik.com/free-psd/smartphone-mockup_1310-812.jpg?w=4000"
+    },
+    {
+      "id": 2,
+      "name": "Tv",
+      "price": "999€",
+      "image": "https://img.freepik.com/free-psd/smartphone-mockup_1310-812.jpg?w=4000"
+    },
+    {
+      "id": 3,
+      "name": "Headphone",
+      "price": "149€",
+      "image": "https://media.graphassets.com/9NFzjzfOQtOY0pbmyUO5"
+    },
+    {
+      "id": 4,
+      "name": "Guitar",
+      "price": "499€",
+      "image": "https://s3.amazonaws.com/busites_www/takamine/content/images/GD51CE-NAT_h.png"
+    },
+    {
+      "id": 5,
+      "name": "Laptop",
+      "price": "1299€",
+      "image": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4LqQX?ver=fe80&q=90&m=6&h=705&w=1253&b=%23FFFFFFFF&f=jpg&o=f&p=140&aim=true"
+    },
+    {
+      "id": 6,
+      "name": "Keyboard",
+      "price": "199€",
+      "image": "https://m.media-amazon.com/images/I/61vjNMgYGLL._AC_SL1500_.jpg"
     }
   ]
 }

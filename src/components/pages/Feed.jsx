@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
-import InfiniteScroll from "react-infinite-scroll-component";
 
-
-import Card from "./Card";
+import Card from "../CardFeed";
 import axios from "axios";
 
 const Feed = () => {
-  // const [items, setItems] = useState([]);
-  const apiEndPoint = "http://localhost:3001/items";
+
+const apiEndPoint = "http://localhost:3001/items";
 
 ////////////////////////////////////////////////////////////////
 const[item, setItem] = useState([]);
@@ -36,19 +34,8 @@ useEffect(()=> {
 
 ////////////////////////////////////////////////////////////////
 
-  // useEffect(() => {
-  //   const getItems = async () => {
-  //     const { data: res } = await axios.get(apiEndPoint);
-  //     setItems(res);
-  //   };
-  //   getItems();
-  // }, []);
-
   return (
     <div className="container">
-
-      
-
       <div className="row justify-content-center">
         {item.map((el) => {
           const { title, author, id, image } = el;

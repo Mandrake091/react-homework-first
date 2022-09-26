@@ -3,7 +3,6 @@ import React from "react";
 function Card(props) {
   const { title, author, id, image } = props;
 
-  console.log();
 
   return (
     <div className="col-12 col-md-3">

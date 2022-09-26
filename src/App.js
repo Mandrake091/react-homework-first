@@ -12,12 +12,12 @@ import Feed from "./components/pages/Feed";
 import Contact from "./components/pages/Contact";
 import NavBar from "./components/NavBar";
 import WishList from "./components/pages/WishList";
+import Cart from "./components/Cart";
+import { CartProvider } from "react-use-cart";
 
 console.log("e-mail: admin@admin.com", "psw: Admin123");
 
 function App() {
-
-
   return (
     <div>
       <AuthContextProvider>
@@ -37,7 +37,10 @@ function App() {
             path="/wishlist"
             element={
               <ProtectedRoute>
-                <WishList />
+                <CartProvider>
+                  <WishList />
+                  <Cart />
+                </CartProvider>
               </ProtectedRoute>
             }
           />
@@ -45,7 +48,7 @@ function App() {
             path="/feed"
             element={
               <ProtectedRoute>
-                <Feed/>
+                <Feed />
               </ProtectedRoute>
             }
           />
