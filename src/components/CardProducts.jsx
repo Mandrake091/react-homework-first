@@ -12,7 +12,7 @@ const CardProducts = (props) => {
         <div className="card-body">
           <h5 className="card-title">{props.name}</h5>
           <p className="card-text">{props.price}</p>
-          <button onClick={() => addItem(props)}  className="btn btn-primary">
+          <button onClick={() => addItem(props.item)}  className="btn btn-primary">
             Add to wishlist
           </button>
         </div>

@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CardProducts from "../CardProducts";
 
-
 function WishList() {
   const apiEndPoint = "http://localhost:3001/products";
 
@@ -28,11 +27,17 @@ function WishList() {
       <div className="row justify-content-center">
         {item.map((el, index) => {
           return (
-            <CardProducts id={el.id} name={el.name} item={el.item} price={el.price} image={el.image}  key={index}/>
+            <CardProducts
+              id={el.id}
+              name={el.name}
+              item={el}
+              price={el.price}
+              image={el.image}
+              key={index}
+            />
           );
         })}
       </div>
-     
     </div>
   );
 }

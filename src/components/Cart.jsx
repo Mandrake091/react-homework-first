@@ -1,34 +1,56 @@
-import React from 'react'
+import React from "react";
 import { useCart } from "react-use-cart";
-  // const { price, name, id, image } = props;
+// const { price, name, id, image } = props;
 const WishListComponent = () => {
-
-  const { 
+  const {
     isEmpty,
     totalItems,
     totalUniqueItems,
     removeItems,
+    removeItem,
     emptyCart,
-    item } = useCart();
+    items,
+  } = useCart();
 
-    if(isEmpty){
-      
-
-      return <h1>Your wishlist is empty</h1>;
-    } 
-
+  if (isEmpty) {
+    return <h1>Your wishlist is empty</h1>;
+  }
 
   return (
-    <div className='container'>
+    <div className="container mt-5">
       <div className="row">
         <div className="col-12">
-          <h5>Wishlist {totalUniqueItems} total product: {totalItems}</h5>
-
+          <h5>
+            Wishlist {totalUniqueItems} total product: {totalItems}
+          </h5>
+          <button className="btn btn-danger mb-3" onClick={() => emptyCart()}>remove all</button>
+          <table className="table table-striped table-hover m-o">
+            <tbody>
+              {items.map((el, index) => {
+                return (
+                  <tr key={index}>
+                    <td>
+                      <img className="w-25" src={el.image} alt="" />
+                    </td>
+                    <td>{el.name}</td>
+                    <td>{el.price}</td>
+                    <td>
+                      <button
+                        onClick={() => removeItem(el.id)}
+                        className="btn btn-success"
+                      >
+                        Remove
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
       </div>
-      
     </div>
-  )
-}
+  );
+};
 
-export default WishListComponent
+export default WishListComponent;
