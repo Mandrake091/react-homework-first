@@ -4,21 +4,15 @@ import Axios from "axios";
 function Contact() {
   const url = "https://webhook.site/d1870a2b-10ac-47f0-859c-1af0cc295840";
 
-  // const [data, setData] = useState({
-  //   firstname: "",
-  //   lastname: "",
-  //   email: "",
-  //   subject: "",
-  //   text: "",
-  //   privacy: "",
-  // });
+  const [isPrivacy, setPrivacy] = useState(false);
+
 
   const submit = (event) => {
-    // const newData = { ...data };
-    // newData[e.target.id] = e.target.value;
-    // setData(newData);
-    // console.log(newData);
+  
     event.preventDefault();
+
+    setPrivacy((current) => !current);
+
     const firstName = event.target.firstname.value;
     const lastName = event.target.lastname.value;
     const email = event.target.email.value;
@@ -26,37 +20,25 @@ function Contact() {
     const privacy = event.target.privacy.value;
     const text = event.target.text.value;
 
-    try{  fetch(url,{
-      method: 'post',
-      mode: 'no-cors',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({firstName, lastName, email, privacy, subject, text})
-    })
-    } catch(e){
-    }
-  }
-    
-
-  // function submit(e) {
-  //   e.preventDefault();
-
-  //   axios.post(url, {});
-  // }
-  // axios
-  //   .post(url, {
-  //     firstname: data.firstname,
-  //     lastname: data.lastname,
-  //     email: data.email,
-  //     subject: data.subject,
-  //     text: data.text,
-  //     privacy: data.privacy,
-  //   })
-  //   .then((res) => {
-  //     console.log(res.data);
-  //   });
+    try {
+      fetch(url, {
+        method: "post",
+        mode: "no-cors",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          privacy,
+          subject,
+          text,
+        }),
+      });
+    } catch (e) {}
+  };
 
   return (
     <div className="container">
@@ -67,8 +49,6 @@ function Contact() {
               <div className="col-12 col-lg-6 p-0">
                 <label className="form-label">Firstname</label>
                 <input
-                  // onChange={(e) => handleSubmit(e)}
-                  // value="firstname"
                   type="text"
                   className="form-control"
                   id="firstname"
@@ -80,8 +60,6 @@ function Contact() {
                   Lastname
                 </label>
                 <input
-                  // onChange={(e) => handleSubmit(e)}
-                  // value={data.lastname}
                   type="text"
                   className="form-control"
                   id="lastname"
@@ -96,8 +74,6 @@ function Contact() {
                   email
                 </label>
                 <input
-                  // onChange={(e) => handleSubmit(e)}
-                  // value={data.email}
                   type="email"
                   className="form-control"
                   id="email"
@@ -109,8 +85,6 @@ function Contact() {
                   subject
                 </label>
                 <input
-                  // onChange={(e) => handleSubmit(e)}
-                  // value={data.subject}
                   type="text"
                   className="form-control"
                   id="subject"
@@ -118,35 +92,35 @@ function Contact() {
                 />
               </div>
             </div>
-            <div className="mb-3">
-              <label htmlform="exampleInputEmail1" className="form-label">
-                textarea
-              </label>
-              <div className="form-floating">
-                <textarea
-                  // onChange={(e) => handleSubmit(e)}
-                  // value={data.text}
-                  className="form-control"
-                  placeholder="Leave a comment here"
-                  id="text"
-                ></textarea>
-                <label htmlform="floatingTextarea">Comments</label>
-              </div>
-              <div id="emailHelp" className="form-text">
-                We'll never share your email with anyone else.
+            <div className="row justify-content-center">
+              <div className="col-12 col-lg-12 mb-3">
+                <label htmlform="exampleInputEmail1" className="form-label">
+                  textarea
+                </label>
+                <div className="form-floating">
+                  <textarea
+              
+                    className="form-control"
+                    placeholder="Leave a comment here"
+                    id="text"
+                  ></textarea>
+                  <label htmlform="floatingTextarea">Comments</label>
+                </div>
+                <div id="emailHelp" className="form-text">
+                  We'll never share your email with anyone else.
+                </div>
               </div>
             </div>
 
             <div className="mb-3 form-check">
               <input
-                // onChange={(e) => handleSubmit(e)}
-                // value={data.privacy}
+                value={isPrivacy}
                 type="checkbox"
                 className="form-check-input"
                 id="privacy"
               />
               <label className="form-check-label" htmlform="exampleCheck1">
-                Check me out
+                Privacy consent
               </label>
             </div>
             <button type="submit" className="btn btn-primary">

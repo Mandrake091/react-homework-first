@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
@@ -18,15 +18,22 @@ function NavBar() {
     }
   };
 
+ const [isActive, setIsActive] = useState(false);
+
+ const handleClick = (event) => {
+   // 👇️ toggle isActive state on click
+   setIsActive((current) => !current);
+ };
 
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="/home">
-          Home
+            Home
           </a>
           <button
+            onClick={handleClick}
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -37,9 +44,20 @@ function NavBar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div
+            className={
+              isActive
+                ? "collapse show navbar-collapse text-end justify-content-between"
+                : "collapse navbar-collapse justify-content-between"
+            }
+            id="navbarNavAltMarkup"
+          >
             <div className="navbar-nav">
-              <a className="nav-link active" aria-current="page" href="/wishlist">
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="/wishlist"
+              >
                 Wishlist
               </a>
               <a className="nav-link" href="/feed">
@@ -49,9 +67,11 @@ function NavBar() {
                 Contact me
               </a>
             </div>
+            <button onClick={handleLogout} className="btn btn-primary me-3">
+              Logout
+            </button>
           </div>
         </div>
-        <button onClick={handleLogout} className="btn btn-primary me-3">Logout</button>
       </nav>
     </div>
   );
