@@ -2,75 +2,75 @@
   "items": [
     {
       "id": 1,
-      "title": "Sea",
-      "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/400/300"
+      "title": "Granada",
+      "author": "Ivar Aasen",
+      "image": "https://picsum.photos/id/1/500/300"
     },
     {
       "id": 2,
-      "title": "Sea",
-      "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/400/300"
+      "title": "Parigi",
+      "author": "Nana Achampong",
+      "image": "https://picsum.photos/id/237/500/300"
     },
     {
       "id": 3,
-      "title": "Sea",
-      "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/400/300"
+      "title": "Milano",
+      "author": "Ines Abassi ",
+      "image": "https://picsum.photos/id/4/500/300"
     },
     {
       "id": 4,
       "title": "Sea",
-      "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/400/300"
+      "author": "Duane Ackerson ",
+      "image": "https://picsum.photos/id/24/500/300"
     },
     {
       "id": 5,
-      "title": "Sea",
-      "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/400/300"
+      "title": "Grecia",
+      "author": "Kathy Acker ",
+      "image": "https://picsum.photos/id/67/500/300"
     },
     {
       "id": 6,
-      "title": "Sea",
-      "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/400/300"
+      "title": "Milano",
+      "author": "János Aczél",
+      "image": "https://picsum.photos/id/8/500/300"
     },
     {
       "id": 7,
-      "title": "Sea",
-      "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/400/300"
+      "title": "Torino",
+      "author": "Adam de la Halle",
+      "image": "https://picsum.photos/id/54/500/300"
     },
     {
       "id": 8,
-      "title": "Sea",
-      "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/400/300"
+      "title": "Palermo",
+      "author": "Ratko Adamović ",
+      "image": "https://picsum.photos/id/23/500/300"
     },
     {
       "id": 9,
       "title": "Sea",
-      "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/400/300"
+      "author": "Franco",
+      "image": "https://picsum.photos/id/21/500/300"
     },
     {
       "id": 10,
-      "title": "Sea",
-      "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/400/300"
+      "title": "Berlino",
+      "author": "Ruth Adam ",
+      "image": "https://picsum.photos/id/27/500/300"
     },
     {
       "id": 11,
-      "title": "Sea",
-      "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/400/300"
+      "title": "Granada",
+      "author": "Robert Adams ",
+      "image": "https://picsum.photos/id/237/500/300"
     },
     {
       "id": 12,
-      "title": "Sea",
-      "author": "Marco",
-      "image": "https://picsum.photos/seed/picsum/400/300"
+      "title": "Tunisi",
+      "author": "Henry Adamson",
+      "image": "https://picsum.photos/id/237/500/300"
     }
   ],
   "products": [

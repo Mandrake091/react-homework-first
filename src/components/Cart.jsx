@@ -13,7 +13,15 @@ const WishListComponent = () => {
   } = useCart();
 
   if (isEmpty) {
-    return <h1>Your wishlist is empty</h1>;
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <h1>Your wishlist is empty</h1>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -23,7 +31,9 @@ const WishListComponent = () => {
           <h5>
             Wishlist {totalUniqueItems} total product: {totalItems}
           </h5>
-          <button className="btn btn-danger mb-3" onClick={() => emptyCart()}>remove all</button>
+          <button className="btn btn-danger mb-3" onClick={() => emptyCart()}>
+            remove all
+          </button>
           <table className="table table-striped table-hover m-o">
             <tbody>
               {items.map((el, index) => {

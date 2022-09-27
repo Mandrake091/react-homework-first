@@ -3,7 +3,6 @@ import React from "react";
 
 import Signin from "./components/Signin";
 
-
 import { Route, Routes } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";

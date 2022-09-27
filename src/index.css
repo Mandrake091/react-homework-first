@@ -17,11 +17,11 @@ code {
   column-gap: 20px;
 }
 .card {
-  height: 350px !important;
+  height: 300px !important;
 }
 .card-img-top {
   width: 100% !important;
-  height: 200px !important;
+  height: 150px !important;
   object-fit: contain;
 }
 .valid {
