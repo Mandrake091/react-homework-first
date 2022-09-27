@@ -2,16 +2,31 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 import PswRequisite from "./PswRequisite";
+import PswToggle from "./PswToggle";
+import "font-awesome/css/font-awesome.min.css";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+
+
+
+
+/////////////////////////////////////////7
 const Signin = () => {
-  const [email, setEmail] = useState("");
 
-  const [error, setError] = useState("");
+  const [PasswordInputType, Icon] = PswToggle();
+
+
   const navigate = useNavigate();
   const { signIn } = UserAuth();
 
   ////////////////////////////////////////////////////////////////
+  ///State management
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+
   const [pswRequisite, setPasswordRequisite] = useState(false);
   const [checks, setChecks] = useState({
     capsLetterCheck: false,
@@ -52,8 +67,8 @@ const Signin = () => {
       await signIn(email, password);
       navigate("/home");
     } catch (e) {
-      setError(e.message);
-      console.log(e.message);
+      setError(e.error);
+      console.log(error);
     }
   };
 
@@ -76,15 +91,19 @@ const Signin = () => {
               <label htmlFor="password" className="py-2 font-medium">
                 Password
               </label>
-              <input
-                value={password}
-                onChange={checkPassword}
-                className="form-control"
-                type="password"
-                onFocus={handleOnFocus}
-                onBlur={handleOnBlur}
-                onKeyUp={handleKeyUp}
-              />
+              <div className="position-relative">
+                <input
+                  value={password}
+                  onChange={checkPassword}
+                  className="form-control"
+                  type={PasswordInputType}
+                  onFocus={handleOnFocus}
+                  onBlur={handleOnBlur}
+                  onKeyUp={handleKeyUp}
+                />
+
+                <div className="password-toggle-icon">{Icon}</div>
+              </div>
             </div>
             {pswRequisite ? (
               <PswRequisite

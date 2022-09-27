@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -142,4 +143,14 @@ code {
   100% {
     background-color: transparent;
   }
+}
+
+/* Icon conn visibility password*/
+.password-toggle-icon{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 1000;
+  cursor: pointer;
+  background-color: dark;
 }

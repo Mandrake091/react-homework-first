@@ -38,7 +38,7 @@ function Feed() {
     setTimeout(() => {
       setLoading(false);
     },1000);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll)
   }, []);
   ////////////////////////////////////////////////////////////////
   return loading ? 
