@@ -11,8 +11,6 @@ function Contact() {
   
     event.preventDefault();
 
-  
-
     const firstName = event.target.firstname.value;
     const lastName = event.target.lastname.value;
     const email = event.target.email.value;
@@ -116,8 +114,7 @@ function Contact() {
               <input
                 value={isPrivacy}
                 type="checkbox"
-             onChange={() => {
-      setPrivacy(!isPrivacy)}}
+                onChange={() => {setPrivacy(!isPrivacy)}}
                 className="form-check-input"
                 id="privacy"
               />

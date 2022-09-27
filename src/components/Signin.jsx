@@ -1,13 +1,49 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
+import PswRequisite from "./PswRequisite";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const { signIn } = UserAuth();
+
+  ////////////////////////////////////////////////////////////////
+  const [password, setPassword] = useState("");
+  const [pswRequisite, setPasswordRequisite] = useState(false);
+  const [checks, setChecks] = useState({
+    capsLetterCheck: false,
+    numberCheck: false,
+    pwdLengthCheck: false,
+  });
+
+  const handleKeyUp = (e) => {
+    const { value } = e.target;
+    const capsLetterCheck = /[A-Z]/.test(value);
+    const numberCheck = /[0-9]/.test(value);
+    const pwdLengthCheck = value.length >= 8;
+    setChecks({
+      capsLetterCheck,
+      numberCheck,
+      pwdLengthCheck,
+    });
+  };
+
+  const checkPassword = (e) => {
+    setPassword(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const handleOnFocus = () => {
+    setPasswordRequisite(true);
+  };
+  const handleOnBlur = () => {
+    setPasswordRequisite(false);
+  };
+
+  //////////////////////////////////////////////////////////////
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,13 +73,26 @@ const Signin = () => {
               />
             </div>
             <div className="form-label">
-              <label className="py-2 font-medium">Password</label>
+              <label htmlFor="password" className="py-2 font-medium">
+                Password
+              </label>
               <input
-                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                onChange={checkPassword}
                 className="form-control"
                 type="password"
+                onFocus={handleOnFocus}
+                onBlur={handleOnBlur}
+                onKeyUp={handleKeyUp}
               />
             </div>
+            {pswRequisite ? (
+              <PswRequisite
+                capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
+                numberFlag={checks.numberCheck ? "valid" : "invalid"}
+                pwdLenghtFlag={checks.pwdLengthCheck ? "valid" : "invalid"}
+              />
+            ) : null}
             <div className="text-center">
               <button className="btn btn-primary">Sign In</button>
             </div>
