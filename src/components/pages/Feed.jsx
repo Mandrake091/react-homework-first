@@ -48,7 +48,15 @@ function Feed() {
       <div className="row justify-content-center">
         {item.map((el) => {
           const { title, author, id, image } = el;
-          return <Card id={id} title={title} author={author} image={image} />;
+          return (
+            <Card
+              key={id}
+              id={id}
+              title={title}
+              author={author}
+              image={image}
+            />
+          );
         })}
       </div>
     </div>
