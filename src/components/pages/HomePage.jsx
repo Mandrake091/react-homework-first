@@ -1,9 +1,7 @@
 import React from "react";
 import Loader from "../Loader";
 
-
 const HomePage = () => {
-
   return (
     <div>
       <div className="container text-center">

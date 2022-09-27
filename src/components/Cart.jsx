@@ -1,6 +1,7 @@
 import React from "react";
 import { useCart } from "react-use-cart";
-// const { price, name, id, image } = props;
+/////////////////////////////////////////
+//use cart function for manage wishlist items
 const WishListComponent = () => {
   const {
     isEmpty,
@@ -11,7 +12,7 @@ const WishListComponent = () => {
     emptyCart,
     items,
   } = useCart();
-
+/////////////////////////////////////////
   return totalUniqueItems != 0 ? 
     <div className="container mt-5">
       <div className="row">

@@ -1,5 +1,4 @@
 import React from "react";
-
 function Loader() {
   return (
     <div className="loader">
@@ -24,5 +23,4 @@ function Loader() {
     </div>
   );
 }
-
 export default Loader;

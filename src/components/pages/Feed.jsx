@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
-
 import Card from "../CardFeed";
 import axios from "axios";
 import Loader from "../Loader";
+//////////////////////////////////////////////////
 
 function Feed() {
+  //api endpoint in internal server
   const apiEndPoint = "http://localhost:3001/items";
-
   ////////////////////////////////////////////////////////////////
+  //State management for items and loader
   const [item, setItem] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  ///////////////////////////////////////////////
+//Function for loading items (get)
   const loadMoreItem = () => {
     axios.get(apiEndPoint).then(({ data }) => {
       const newItem = [];
@@ -18,7 +20,8 @@ function Feed() {
       setItem((oldItem) => [...oldItem, ...newItem]);
     });
   };
-
+///////////////////////////////////////////////////////////
+//function for take position of scroll and load more items
   const handleScroll = (e) => {
     if (
       window.innerHeight + e.target.documentElement.scrollTop + 1 >=
@@ -27,6 +30,8 @@ function Feed() {
       loadMoreItem();
     }
   };
+///////////////////////////////////////////////////////////////////////
+//function for set up Loader state true false when loading
   useEffect(() => {
     loadMoreItem();
     setLoading(true);
@@ -35,9 +40,7 @@ function Feed() {
     },1000);
     window.addEventListener("scroll", handleScroll);
   }, []);
-
   ////////////////////////////////////////////////////////////////
-
   return loading ? 
     <Loader />
    : 

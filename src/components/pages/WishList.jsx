@@ -5,12 +5,15 @@ import CardProducts from "../CardProducts";
 import Loader from "../Loader";
 
 function WishList() {
+  //Api for internal db endpoint
   const apiEndPoint = "http://localhost:3001/products";
-
+  //
   ////////////////////////////////////////////////////////////////
+  //State management
   const [item, setItem] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  //////////////////////////////////////////////////////////////
+  //Functions for load items
   const loadMoreItem = () => {
     axios.get(apiEndPoint).then(({ data }) => {
       const newItem = [];
@@ -24,14 +27,14 @@ function WishList() {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
-  
   }, []);
-
+  //////////////////////////////////////////////////////////////
+  
   return loading?
   <Loader/>
   :
-    <div className="container">
-      <h2>There are: {item.length} items</h2>
+    <div className="container mb-5">
+      <h2 className="text-center mb-4">There are: {item.length} items</h2>
       <div className="row justify-content-center">
         {item.map((el, index) => {
           return (
