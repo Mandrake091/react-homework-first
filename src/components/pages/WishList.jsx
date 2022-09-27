@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 import CardProducts from "../CardProducts";
+import Loader from "../Loader";
 
 function WishList() {
   const apiEndPoint = "http://localhost:3001/products";
 
   ////////////////////////////////////////////////////////////////
   const [item, setItem] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const loadMoreItem = () => {
     axios.get(apiEndPoint).then(({ data }) => {
@@ -18,12 +20,18 @@ function WishList() {
   };
   useEffect(() => {
     loadMoreItem();
-    console.log(item);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  
   }, []);
 
-  return (
+  return loading?
+  <Loader/>
+  :
     <div className="container">
-      <h2>There are {item.length} items</h2>
+      <h2>There are: {item.length} items</h2>
       <div className="row justify-content-center">
         {item.map((el, index) => {
           return (
@@ -39,7 +47,6 @@ function WishList() {
         })}
       </div>
     </div>
-  );
 }
 
 export default WishList;
