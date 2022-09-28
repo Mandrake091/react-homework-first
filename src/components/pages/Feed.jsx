@@ -44,7 +44,7 @@ function Feed() {
   return loading ? 
     <Loader />
    : 
-    <div className="container">
+    <div className="container-fluid">
       <div className="row justify-content-center">
         {item.map((el) => {
           const { title, author, id, image } = el;

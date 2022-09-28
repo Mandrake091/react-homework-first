@@ -29,8 +29,8 @@ function NavBar() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-light mb-3">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-md bg-dark p-0">
+        <div className="container-fluid  py-3">
           <a className="navbar-brand" href="/home">
             Home
           </a>
@@ -49,14 +49,14 @@ function NavBar() {
           <div
             className={
               isActive
-                ? "collapse show navbar-collapse text-end justify-content-between"
+                ? "collapse show navbar-collapse justify-content-between text-center"
                 : "collapse navbar-collapse justify-content-between"
             }
             id="navbarNavAltMarkup"
           >
             <div className="navbar-nav">
               <a
-                className="nav-link active"
+                className="nav-link"
                 aria-current="page"
                 href="/wishlist"
               >
@@ -69,7 +69,7 @@ function NavBar() {
                 Contact me
               </a>
             </div>
-            <button onClick={handleLogout} className="btn btn-primary me-3">
+            <button onClick={handleLogout} className="btn btn-primary">
               Logout
             </button>
           </div>

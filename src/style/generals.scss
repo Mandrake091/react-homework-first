@@ -1,0 +1,57 @@
+$bg: #011126;
+$main-text: #F2F2F2;
+$secondary-text: #407344;
+$secondary-bg: #193140;
+$text: #8C8265;
+
+.container-fluid {
+  background-color: $bg;
+}
+.navbar-brand, .nav-link {
+  color: #f2f2f2;
+}
+.nav-link:hover{
+    color: $text;
+}
+h2,h1{
+    color: $secondary-text;
+}
+label{
+    color: $secondary-text;
+}
+button{
+    color: $secondary-text;
+}
+p{
+    color: $text;
+}
+.card{
+    color: $secondary-text;
+    background-color: $secondary-bg;
+    border: 1px solid $text;
+   
+}
+.shadow{
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    box-shadow: inset 10px 10px 10px 5px #0000006e !important;
+    top: 1px;
+    left: 1px;
+}
+
+// div.row{
+//     height: calc(100vh - (40px)) ;
+// }
+#root {
+  height: 100vh;
+  background-color: $bg;
+}
+.container-fluid {
+  > div.row {
+    height: calc(100vh - (72px));
+  }
+  >div.row.justify-content-center{
+    height: 100%;
+  }
+}

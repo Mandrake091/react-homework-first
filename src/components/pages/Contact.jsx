@@ -40,7 +40,7 @@ function Contact() {
 //////////////////////////////////////////////
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row justify-content-center pt-5">
         <div className="col-6">
           <form onSubmit={submit}>
