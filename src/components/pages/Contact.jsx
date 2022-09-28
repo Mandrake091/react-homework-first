@@ -124,8 +124,8 @@ function Contact() {
                   Privacy consent
                 </label>
               </div>
-              <button type="submit" className="btn btn-primary w-50">
-                Submit
+              <button type="submit" className="btn w-25">
+                Send
               </button>
             </div>
           </form>
