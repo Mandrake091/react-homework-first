@@ -131,9 +131,6 @@ function Contact() {
           </form>
         </div>
       </div>
-      <p className="text-end">
-        <a href="https://webhook.site/#!/d1870a2b-10ac-47f0-859c-1af0cc295840/b813042a-5f78-4652-9aef-96a8335a2248/1">View Json</a>
-      </p>
     </div>
   );
 }
