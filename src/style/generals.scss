@@ -1,0 +1,83 @@
+$bg: #011126;
+$main-text: #f2f2f2;
+$secondary-text: #407344;
+$secondary-bg: #193140;
+$text: #8c8265;
+
+.container-fluid {
+  background-color: $bg;
+}
+.navbar-brand,
+.nav-link {
+  color: #f2f2f2;
+}
+.nav-link:hover {
+  color: $text;
+}
+h1 {
+  color: $text;
+}
+h2 {
+  color: $secondary-text;
+}
+div > label,
+h5,
+td,
+th {
+  color: $main-text;
+}
+.table {
+  border-radius: 5px;
+  background-color: $secondary-bg;
+}
+button.btn {
+  color: $main-text !important;
+  background-color: $secondary-text !important;
+}
+div.col-4 > p {
+  color: $main-text;
+}
+input {
+  background-color: $secondary-bg !important;
+  color: $main-text !important;
+}
+svg {
+  color: $main-text;
+}
+.card {
+  color: $secondary-text;
+  background-color: $secondary-bg;
+  border: 1px solid $text;
+}
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 99%;
+  box-shadow: inset 10px 10px 10px 5px #0000006e !important;
+  top: 1px;
+  left: 1px;
+}
+span.navbar-toggler-icon {
+  color: $main-text !important;
+}
+button.navbar-toggler {
+  background-color: $secondary-text !important;
+}
+button.navbar-toggler:hover {
+  background-color: $text !important;
+}
+// div.row{
+//     height: calc(100vh - (40px)) ;
+// }
+#root {
+  height: 100vh;
+  background-color: $bg;
+}
+.container-fluid {
+  > div.row {
+    height: calc(100vh - (72px));
+  }
+  > div.row.justify-content-center {
+    height: 100%;
+  }
+}

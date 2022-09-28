@@ -14,17 +14,17 @@ const WishListComponent = () => {
   } = useCart();
 /////////////////////////////////////////
   return totalUniqueItems != 0 ? 
-    <div className="container mt-5">
-      <div className="row">
-        <div className="col-12">
+    <div className="container-fluid mt-5">
+      <div className="row justify-content-center">
+        <div className="col-10">
          
           <h5>
             Wishlist {totalUniqueItems} Total product: {totalItems}
           </h5>
-          <button className="btn btn-danger mb-3" onClick={() => emptyCart()}>
+          <button className="btn mb-3" onClick={() => emptyCart()}>
             Remove all
           </button>
-          <table className="table table-striped table-hover m-o">
+          <table className="table m-o">
             <tbody>
               {items.map((el, index) => {
                 return (
@@ -37,7 +37,7 @@ const WishListComponent = () => {
                     <td>
                       <button
                         onClick={() => removeItem(el.id)}
-                        className="btn btn-success"
+                        className="btn"
                       >
                         Remove
                       </button>

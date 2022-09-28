@@ -5,22 +5,15 @@ import PswRequisite from "./PswRequisite";
 import PswToggle from "./PswToggle";
 import "font-awesome/css/font-awesome.min.css";
 
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-
-
-
-
 /////////////////////////////////////////7
 const Signin = () => {
-
   const [PasswordInputType, Icon] = PswToggle();
-
-
   const navigate = useNavigate();
   const { signIn } = UserAuth();
-
   ////////////////////////////////////////////////////////////////
   ///State management
   const [password, setPassword] = useState("");
@@ -73,9 +66,9 @@ const Signin = () => {
   };
 
   return (
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-10 col-md-4">
+    <div className="container-fluid">
+      <div className="row justify-content-center align-items-center">
+        <div className="col-8 col-md-4">
           <h1 className="mb-5 text-center">React Homework</h1>
           <h2 className="text-center pb-3">Sign in to your account</h2>
           <form onSubmit={handleSubmit}>
@@ -113,7 +106,7 @@ const Signin = () => {
               />
             ) : null}
             <div className="text-center">
-              <button className="btn btn-primary">Sign In</button>
+              <button className="btn">Sign In</button>
             </div>
           </form>
         </div>

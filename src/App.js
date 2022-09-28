@@ -11,13 +11,14 @@ import NavBar from "./components/NavBar";
 import WishList from "./components/pages/WishList";
 import Cart from "./components/Cart";
 import { CartProvider } from "react-use-cart";
+import "./style/generals.scss"
 //////////////////////////////////////////////////////////////
 
 console.log("e-mail: admin@admin.com", "psw: Admin123");
 
 function App() {
   return (
-    <div>
+  
       <AuthContextProvider>
         <NavBar />
         <Routes>
@@ -60,7 +61,7 @@ function App() {
           />
         </Routes>
       </AuthContextProvider>
-    </div>
+  
   );
 }
 
