@@ -106,7 +106,7 @@ const Signin = () => {
               />
             ) : null}
             <div className="text-center">
-              <button className="btn btn-primary">Sign In</button>
+              <button className="btn">Sign In</button>
             </div>
           </form>
         </div>

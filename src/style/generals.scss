@@ -14,16 +14,24 @@ $text: #8C8265;
     color: $text;
 }
 h2,h1{
-    color: $secondary-text;
+    color: $text;
 }
 label{
-    color: $secondary-text;
+    color: $main-text;
 }
-button{
-    color: $secondary-text;
+button.btn{
+    color: $main-text !important;
+    background-color: $secondary-text !important;
 }
 p{
-    color: $text;
+    color: $secondary-text !important;
+}
+input{
+    background-color:  $secondary-bg !important;
+    color: $main-text !important;
+}
+svg{
+    color: $main-text;
 }
 .card{
     color: $secondary-text;
@@ -39,7 +47,15 @@ p{
     top: 1px;
     left: 1px;
 }
-
+span.navbar-toggler-icon{
+    color: $main-text !important;
+}
+button.navbar-toggler{
+     background-color: $secondary-text !important;
+}
+button.navbar-toggler:hover{
+     background-color: $text !important;
+}
 // div.row{
 //     height: calc(100vh - (40px)) ;
 // }

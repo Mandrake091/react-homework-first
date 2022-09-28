@@ -29,7 +29,7 @@ function NavBar() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-md bg-dark p-0">
+      <nav className="navbar navbar-expand-md bg-light p-0">
         <div className="container-fluid  py-3">
           <a className="navbar-brand" href="/home">
             Home
@@ -69,7 +69,7 @@ function NavBar() {
                 Contact me
               </a>
             </div>
-            <button onClick={handleLogout} className="btn btn-primary">
+            <button onClick={handleLogout} className="btn">
               Logout
             </button>
           </div>
