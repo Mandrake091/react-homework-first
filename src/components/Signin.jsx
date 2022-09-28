@@ -4,11 +4,8 @@ import { UserAuth } from "../context/AuthContext";
 import PswRequisite from "./PswRequisite";
 import PswToggle from "./PswToggle";
 import "font-awesome/css/font-awesome.min.css";
+import ReCAPTCHA from "react-google-recaptcha";
 
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 /////////////////////////////////////////7
 const Signin = () => {
   const [PasswordInputType, Icon] = PswToggle();
@@ -110,6 +107,13 @@ const Signin = () => {
             </div>
           </form>
         </div>
+      </div>
+      <div className="row justify-content-center">
+        <ReCAPTCHA
+          className="mt-5 text-center text-center"
+          sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+          style={{ width: "304px" }}
+        ></ReCAPTCHA>
       </div>
     </div>
   );
