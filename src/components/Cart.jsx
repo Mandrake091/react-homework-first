@@ -14,8 +14,8 @@ const WishListComponent = () => {
   } = useCart();
 /////////////////////////////////////////
   return totalUniqueItems != 0 ? 
-    <div className="container-fluid mt-5">
-      <div className="row justify-content-center">
+    <div className="container-fluid">
+      <div className="row justify-content-center pt-5">
         <div className="col-10">
          
           <h5>

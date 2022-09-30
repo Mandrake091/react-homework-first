@@ -33,7 +33,7 @@ function WishList() {
   return loading?
   <Loader/>
   :
-    <div className="container-fluid mb-5">
+    <div className="container-fluid">
       <h2 className="text-center mb-4">There are: {item.length} items</h2>
       <div className="row justify-content-center">
         {item.map((el, index) => {
