@@ -4,16 +4,14 @@ import { useCart } from "react-use-cart";
 //use cart function for manage wishlist items
 const WishListComponent = () => {
   const {
-    isEmpty,
     totalItems,
     totalUniqueItems,
-    removeItems,
     removeItem,
     emptyCart,
     items,
   } = useCart();
 /////////////////////////////////////////
-  return totalUniqueItems != 0 ? 
+  return totalUniqueItems !== 0 ? 
     <div className="container-fluid">
       <div className="row justify-content-center pt-5">
         <div className="col-10">
